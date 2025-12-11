@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022057b856b6bec8072bcc72b06cc406e5753f5fa5b2eebed05b3f03fcbd70c3d6f6022100d5dc55fa4e89ea5d3c85b9dff2491d4924b80bd783a3ffe90d309766c6803a8d
+    ReservedCode2: 3045022100954ba8d700b8a0772a1d279af60853784f11f99b646b7c3a8568b622000b4abf02205dc5f0e12c1c11c7ee1b5c7c71b9df5f372dacd0c3b7fd701138207d4f4807be
+---
+
 # AI Provider Setup Guide
 
 This guide explains how to set up different AI providers for TeraCharacter, including unfiltered content options.

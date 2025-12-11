@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30450221008b260b62c06c626d8341a78cd8107ecd9509c945900417079be373c7f8a306990220664d0d6a07afb03fe5b5bb222bd3a82a49c6b983fd7f7110ad5f1555cf823a1a
+    ReservedCode2: 3045022100b612005246250935a51de33739432980b0949069e6b3bbc597c44eb22f7c959202205872166596bef7c1a37e3f3278e6adee45093cea37eb34c74fc524622c3768ad
+---
+
 # Multi-Provider AI Support - Implementation Summary
 
 This document summarizes the implementation of multi-provider AI support with unfiltered content capabilities for TeraCharacter.

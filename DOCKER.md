@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022072419e70b67219f5ec01b2158d3d4e5751c01f8e332848af04b4141601b4bd32022100cce59cd4e1976b0c212da6d5a3a3439718c324a233d958125b3981ca470ef053
+    ReservedCode2: 304402202bc52062763d69dc724f2adae4ea441c971a3972507e45a69dfb99aef5b415350220009d3989aaa83136cee9117ce266eb0db710394c6bf89cb31da39fa680f3c7d5
+---
+
 # Docker Deployment Guide
 
 This guide explains how to deploy TeraCharacter using Docker for both local development and Hugging Face Spaces.

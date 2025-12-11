@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 30450221008d8d29b90ab61bcfdedb4bb46624fe2f14d76c465d4b4df9e968a9f8b166ecb3022019e66166dd6d3d7c7dd217d9486567ee5cfe93e854e3525a1b383dad0cf5dd6c
+    ReservedCode2: 304502201391cee23ed3fd2f1a455d65b6825c90638bca02bcab42ca8a50c7badbe75581022100cdfdf7851c3490c8e7925262549f3b7e30cf74b43bfee14f0370d0743c46e5a7
+---
+
 # 🚀 TeraCharacter: Enhanced AI Character Platform
 
 <div align="center">
@@ -71,6 +82,10 @@
    ```bash
    cp .env.example .env.local
    # Edit .env.local with your configuration
+   
+   # For local development, add your HF API key:
+   # HF_API_KEY=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   # Note: When deploying to HF Spaces, use Spaces secrets instead
    ```
 
 3. **Database Setup**
@@ -154,18 +169,34 @@ For detailed Docker documentation, see [DOCKER.md](DOCKER.md).
 
 ### Hugging Face Spaces Deployment
 
+> **💡 New**: Supports Hugging Face Spaces secrets - `.env` file is now optional!
+
 1. **Create a New Space**
    - Go to [Hugging Face Spaces](https://huggingface.co/spaces)
    - Click "Create new Space"
    - Upload this repository
 
 2. **Configure Environment Variables**
-   - Set `HF_TOKEN` in Space settings
-   - Configure other required variables
+   - **Option A: Use Spaces Secrets (Recommended)**
+     - Go to Space Settings → Secrets
+     - Add `HUGGINGFACE_HUB_TOKEN` with your HF token
+     - Add other provider keys as needed (optional)
+   - **Option B: Use .env file**
+     - Add `HF_API_KEY` to your .env.local file
+     - This works for local development
 
 3. **Deploy**
    - The space will automatically build and deploy
    - Your app will be available at `https://your-space-name.hf.space`
+
+4. **Required Environment Variables for HF Spaces**
+   ```
+   HUGGINGFACE_HUB_TOKEN=hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  # Required
+   GROQ_API_KEY=your_groq_key                                   # Optional
+   OPENAI_API_KEY=your_openai_key                              # Optional
+   ```
+
+📖 **Detailed Guide**: See [HF_SPACES_SECRETS.md](HF_SPACES_SECRETS.md) for complete setup instructions
 
 ## 🎯 Features
 
@@ -195,6 +226,7 @@ For detailed Docker documentation, see [DOCKER.md](DOCKER.md).
 
 - [🚀 Docker Deployment Guide](DOCKER.md) - Comprehensive guide for Docker deployment
 - [🤖 AI Provider Setup Guide](PROVIDERS.md) - Configure OpenAI, Hugging Face, Groq, and more
+- [🔧 Hugging Face Spaces Secrets](HF_SPACES_SECRETS.md) - Setup environment variables for HF Spaces (`.env` optional)
 - [🔄 Migration Guide](MIGRATION.md) - Guide for migrating from Cloudflare to Hugging Face
 - [📋 Update Summary](UPDATE_SUMMARY.md) - Detailed list of all changes and improvements
 - [⚡ Quick Setup](scripts/setup.ts) - Automated setup script for new installations

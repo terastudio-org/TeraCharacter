@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3046022100c0d3a3310d1920b022b947b4e7266e4c730668dc6a292dfc590794e1baeefdf5022100f527ec7ef8e9366115d71d27bc03926f95c537a752d77f774d2a52f4e3312718
+    ReservedCode2: 30440220378542686dc570d227f9e3ba44966a47d4e1ac687fbc8cf3169527d0fe5c06e5022001603fb0451ef1b0e4b0b10b4aa9d0ad1cabb70e9a55abce01a750175cfeedc4
+---
+
 # Migration Guide: TeraCharacter v2.0
 
 This guide helps you migrate from the old Cloudflare-based setup to the new Hugging Face integrated version.

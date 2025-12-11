@@ -10,6 +10,7 @@
     "hf:setup": "python scripts/hf_setup.py",
     "hf:sync": "node scripts/hf_sync.js",
     "providers:test": "node scripts/test-providers.js",
+    "hf:test": "node scripts/test-hf-config.js",
     "setup": "bun run scripts/setup.ts"
   },
   "dependencies": {

@@ -1,3 +1,14 @@
+---
+AIGC:
+    ContentProducer: Minimax Agent AI
+    ContentPropagator: Minimax Agent AI
+    Label: AIGC
+    ProduceID: "00000000000000000000000000000000"
+    PropagateID: "00000000000000000000000000000000"
+    ReservedCode1: 3045022100850e1e26e0b27522b3b290d724ab0ae778d90a82c667bb86d5a4983d80f2b5ab02206d6e2cfca62e10d841c5f511941d73b7d8b421473f4d026fff0c72a17831533a
+    ReservedCode2: 304502200a0c7104c4e5ac094fa37ec56da49deeac9b12f543921b8053f480709b7d3be0022100c7078554fe8bfa0c47e5190de23c6633dfd689b95f0f1fd5a91e68a3bedcb7e1
+---
+
 # TeraCharacter Update Summary
 
 ## Overview
