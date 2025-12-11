@@ -1,0 +1,148 @@
+# TeraCharacter - Hugging Face Space Configuration
+
+# Space title and description
+title: "TeraCharacter"
+description: "Create and chat with AI characters. A modern platform for building interactive AI personalities with advanced customization and deployment options."
+emoji: "🤖"
+
+# Requirements file
+requirements_file: requirements.txt
+
+# Hardware configuration
+# Available options: cpu-basic, cpu-upgrade, gpu-t4, gpu-a10g, gpu-a100
+hardware: cpu-basic
+
+# Python version
+python_version: "3.10"
+
+# Commands to run when the Space starts
+start: |
+  echo "🚀 Starting TeraCharacter..."
+  npm install
+  npm run build
+  npm start
+
+# Commands to run when the Space builds
+build: |
+  echo "🏗️  Building TeraCharacter..."
+  npm install
+  npm run build
+
+# Environment variables that should be set by the user
+variables:
+  HF_TOKEN:
+    description: "Your Hugging Face token for API access"
+    type: "secret"
+    default: ""
+  
+  DATABASE_URL:
+    description: "Database connection string"
+    type: "str"
+    default: "file:./database/teracharacter.db"
+  
+  NEXTAUTH_SECRET:
+    description: "Secret for NextAuth authentication"
+    type: "secret"
+    default: ""
+  
+  NEXTAUTH_URL:
+    description: "Base URL of your deployment"
+    type: "str"
+    default: "https://your-space.hf.space"
+  
+  OPENAI_API_KEY:
+    description: "OpenAI API key for AI responses"
+    type: "secret"
+    default: ""
+
+# Library versions for reproducibility
+pinned_libs:
+  huggingface_hub: "0.20.0"
+  datasets: "2.16.0"
+
+# Disable Gradio features (we're using Next.js)
+sdk: gradio
+sdk_version: null
+
+# License for the Space
+license: mit
+
+# Tags for discovery
+tags:
+  - ai
+  - characters
+  - chatbot
+  - llm
+  - interactive
+  - nextjs
+  - database
+
+# Example usage
+example_title: "Create Your First AI Character"
+example_description: |
+  1. Set up your environment variables
+  2. Create a new character using the form
+  3. Configure AI behavior settings
+  4. Start chatting with your character!
+  
+  The platform supports:
+  - Custom character creation with avatars
+  - Advanced AI behavior tuning
+  - Database sync with Hugging Face
+  - Dual deployment (local + HF Spaces)
+  - Modern, responsive UI
+
+# Readme content that will be displayed on the Space
+readme: |
+  # TeraCharacter - AI Character Platform
+  
+  TeraCharacter is a modern platform for creating and interacting with AI characters. Built with Next.js, it features a sleek interface, advanced customization options, and seamless Hugging Face integration.
+  
+  ## Features
+  
+  ✨ **Modern UI**: Beautiful, responsive interface with dark mode support
+  🤖 **AI Characters**: Create custom AI personalities with advanced behavior controls
+  🗄️ **Database Sync**: Seamlessly sync data with Hugging Face datasets
+  🚀 **Dual Deployment**: Works both locally and on Hugging Face Spaces
+  🎨 **Custom Avatars**: Upload and manage character images
+  ⚙️ **Advanced Settings**: Fine-tune AI response parameters
+  📊 **Analytics**: Track character interactions and popularity
+  
+  ## Quick Start
+  
+  1. **Set Environment Variables**: Configure your API keys and settings
+  2. **Create Characters**: Use the intuitive form to build AI personalities
+  3. **Configure Behavior**: Adjust AI parameters for unique responses
+  4. **Deploy**: Works locally or on Hugging Face Spaces
+  
+  ## Technology Stack
+  
+  - **Frontend**: Next.js 14, React, TypeScript
+  - **Styling**: Tailwind CSS, Radix UI, Framer Motion
+  - **Database**: SQLite with Drizzle ORM
+  - **AI Integration**: OpenAI, Hugging Face
+  - **Deployment**: Vercel, Hugging Face Spaces
+  
+  ## Development
+  
+  ```bash
+  # Install dependencies
+  npm install
+  
+  # Set up environment
+  cp .env.example .env.local
+  
+  # Run development server
+  npm run dev
+  
+  # Sync with Hugging Face
+  npm run hf:sync push
+  ```
+  
+  ## Contributing
+  
+  This project is open source and welcomes contributions!
+  
+  ## License
+  
+  MIT License - see LICENSE file for details
